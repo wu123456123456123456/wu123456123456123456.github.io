@@ -72,6 +72,25 @@
 </section>
     <!-- 欧尼酱功能, 谁用谁知道 -->
     
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://example.com" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
     <header class="navbar navbar-inverse" id="gal-header">
     <div class="container">
         <div class="navbar-header">
@@ -184,7 +203,7 @@
     // 获取每页的页码数
     var pageSize = '10'
     var useLeancloud = ''
-    var useComment = ('false' === 'true')
+    var useComment = ('true' === 'true')
     $.getJSON('/content.json', function (json) {
       $('#search-breadcrumb').append(`搜索'${s}'的结果`)
       var result = getArticles(s, 'posts', json).concat(getArticles(s, 'pages', json))
@@ -208,7 +227,7 @@
       	var [month, day] = article.date.split('-')
         ''
         ''
-        var defaultPreview = '/imgs/preview/preview3.jpg'
+        var defaultPreview = '/imgs/preview/preview4.jpg'
         var preview = article.preview ? article.preview : defaultPreview
         var path = '/' + article.path
         resultList.append(`<div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
@@ -477,12 +496,6 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2023/12/15/%E5%AE%B6%E4%BA%BA%E4%BB%AC%EF%BC%8C%E4%BC%A4%E6%84%9F%E4%BA%86%EF%BC%8C%E5%AE%B6%E4%BA%BA%E4%BB%AC/">家人们，伤感了，家人们</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
                     <a href="/2023/12/16/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8hexo-d%E7%9A%84%E6%97%B6%E5%80%99%E7%9A%84%E9%94%99%E8%AF%AF/">关于使用hexo,d的时候的错误</a>
                 </span>
             </li>
@@ -490,6 +503,12 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2023/12/16/%E7%BD%91%E4%B8%8A%E6%94%B6%E9%9B%86%E7%9A%84IDM%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/">网上收集的IDM激活方式</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2023/12/15/%E5%AE%B6%E4%BA%BA%E4%BB%AC%EF%BC%8C%E4%BC%A4%E6%84%9F%E4%BA%86%EF%BC%8C%E5%AE%B6%E4%BA%BA%E4%BB%AC/">家人们，伤感了，家人们</a>
                 </span>
             </li>
             
@@ -528,15 +547,7 @@
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
     
     <li>
-        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
-    </li>
-    
-    <li>
-        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
-    </li>
-    
-    <li>
-        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+        <a href="" target="_blank">暂时没有</a>
     </li>
     
 </div>
@@ -545,15 +556,7 @@
                 <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
     
     <li>
-        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
-    </li>
-    
-    <li>
-        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
-    </li>
-    
-    <li>
-        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+        <a href="https://github.com/wu123456123456123456/" target="_blank">Github</a>
     </li>
     
 </div>
@@ -631,6 +634,34 @@
 <script src="/js/blog.js"></script>
 
 
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Fri Dec 15 2023 20:03:19 GMT+0800'
+      window.commentConfig.owner = 'wu123456123456123456'
+      window.commentConfig.repo = 'pl'
+      window.commentConfig.client_id = '0b2784301b90009372a6'
+      window.commentConfig.client_secret = 'f36c396138f5dbc868303d9328121e01c72be27d'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Fri Dec 15 2023 20:03:19 GMT+0800',
+        owner: 'wu123456123456123456',
+        repo: 'pl',
+        client_id: '0b2784301b90009372a6',
+        client_secret: 'f36c396138f5dbc868303d9328121e01c72be27d',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
 
 
 </html>
